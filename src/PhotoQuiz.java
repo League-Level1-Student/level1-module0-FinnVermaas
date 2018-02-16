@@ -44,17 +44,21 @@ if(a.equalsIgnoreCase("7")) {
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 quizWindow.remove(picture);
 		// 10. find another image and create it (might take more than one line of code)
-String crowd= "http://www.dreams.metroeve.com/wp-content/uploads/2017/03/dreams.metroeve_crowds-dreams-meaning.jpg"
+String crowd= "http://www.dreams.metroeve.com/wp-content/uploads/2017/03/dreams.metroeve_crowds-dreams-meaning.jpg";
 Component photo;
 photo=createImage(crowd);
 		// 11. add the second image to the quiz window
-
-		// 12. pack the quiz window
-
+quizWindow.add(photo);
+		// 12. pack tio
+quizWindow.pack();
 		// 13. ask another question
-
+String b = JOptionPane.showInputDialog("how many people are there");
 		// 14+ check answer, say if correct or incorrect, etc.
-
+if(b.equalsIgnoreCase("1,000,000")){
+System.out.println("correct");	
+}else {
+	System.out.println("incorrect");
+}
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {

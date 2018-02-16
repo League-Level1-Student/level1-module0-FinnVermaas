@@ -33,7 +33,7 @@ Frame.add(Panel);
 		//9. Add the JLabel object to the JPanel
 Panel.add(Label);
 		//10. Pack your JFrame.
-
+Frame.pack();
 		//11. Run your program again. Do you see your message.
 		
 		//12. Use the loadImage method to set the icon of the JLabel object.  
