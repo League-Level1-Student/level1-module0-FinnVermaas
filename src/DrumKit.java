@@ -26,7 +26,7 @@ JLabel cymbalLabelWithImage;
     public static void main(String[] args) throws Exception {
    	 new DrumKit().getGoing();
     }
-
+// gl;gjfg;lkgb3rjol
     private void getGoing() throws MalformedURLException {
    	 // 1. Make a JFrame variable and initialize it using "new JFrame()"
    	 JFrame frame = new JFrame();
