@@ -30,8 +30,8 @@ public class BodyPartQuiz {
 
 	private void startQuiz() {
 
-		// 1. Make an int variable to hold the score.
-
+		// 1. Make an int variable to hold the score., it is 
+int score=0;
 		// 2. Set the size of the window in the initializeGui() method below
 
 		for (int i = 0; i < 4; i++) {
@@ -40,17 +40,110 @@ public class BodyPartQuiz {
 			String guess= JOptionPane.showInputDialog("who is this?");
 			
 			// 5. Check their answer. If they guessed correctly:
-			// -- Tell them they are right and increase the score by 1
+			if (guess.equalsIgnoreCase("arnold")){
+				score=score+1;
+				JOptionPane.showMessageDialog(null,"correct, your score is "+score);	
+			
+			}
+			else if(guess.equalsIgnoreCase("Josh is awesome")){
+				score=score-9999999;
+						JOptionPane.showMessageDialog(null, "josh sucks, your score is " +score); 
+			}
+			else if(guess.equalsIgnoreCase("josh sucks")||guess.equalsIgnoreCase("finn is awesome")) {
+				score=score+5000000;
+				JOptionPane.showMessageDialog(null, "youre right,your score is " +score);
+			}
+			else if(guess.equalsIgnoreCase("finn sucks")){
+				score =0;
+				JOptionPane.showMessageDialog(null, "you suck, your score is 0");
+			}
+			else{
+				JOptionPane.showMessageDialog(null,"incorrect it is arnold,your score is "+score);// -- Tell them they are right and increase the score by 1
+			}
 
-			// 6. Otherwise:
+			// 6. Otherwise:incorrect, it
+			// -- Tell them they are wrong and who the person is
+
+			// 7. Use the showNextImage() method below to get the next image
+			showNextImage();
+			guess= JOptionPane.showInputDialog("who is this?");
+		    // 8. Show them their current score
+			
+			// 9. .... repeat for all your images.....
+			if (guess.equalsIgnoreCase("leonardo")){
+				score=score+1;
+				JOptionPane.showMessageDialog(null,"correct, your score is "+score);	
+			
+			}
+			else if(guess.equalsIgnoreCase("Josh is awesome")){
+				score=score-1;
+						JOptionPane.showMessageDialog(null, "josh sucks, your score is " +score); 
+			}
+			else if(guess.equalsIgnoreCase("josh sucks")||guess.equalsIgnoreCase("finn is awesome")) {
+				score=score+5000000;
+				JOptionPane.showMessageDialog(null, "youre right,your score is " +score);
+			}
+			else{
+				JOptionPane.showMessageDialog(null,"incorrect it is arnold,your score is "+score);// -- Tell them they are right and increase the score by 1
+			}
+
+			// 6. Otherwise:incorrect, it
+			// -- Tell them they are wrong and who the person is
+
+			// 7. Use the showNextImage() method below to get the next image
+			showNextImage();
+			guess= JOptionPane.showInputDialog("who is this?");
+		    // 8. Show them their current score
+			if (guess.equalsIgnoreCase("morgan")){
+				score=score+1;
+				JOptionPane.showMessageDialog(null,"correct, your score is "+score);	
+			
+			}
+			else if(guess.equalsIgnoreCase("Josh is awesome")){
+				score=score-1;
+						JOptionPane.showMessageDialog(null, "josh sucks, your score is " +score); 
+			}
+			else if(guess.equalsIgnoreCase("josh sucks")||guess.equalsIgnoreCase("finn is awesome")) {
+				score=score+5000000;
+				JOptionPane.showMessageDialog(null, "youre right,your score is " +score);
+			}
+			
+			else{
+				JOptionPane.showMessageDialog(null,"incorrect it is arnold,your score is "+score);// -- Tell them they are right and increase the score by 1
+			}
+
+			// 6. Otherwise:incorrect, it
+			// -- Tell them they are wrong and who the person is
+
+			// 7. Use the showNextImage() method below to get the next image
+			showNextImage();
+			guess= JOptionPane.showInputDialog("who is this?");
+		    // 8. Show them their current score
+			 if(guess.equalsIgnoreCase("Josh is awesome")){
+				score=score-9999999;
+						JOptionPane.showMessageDialog(null, "josh sucks, your score is " +score); 
+			}
+			
+			else if (guess.equalsIgnoreCase("jack")){
+				score=score+1;
+				JOptionPane.showMessageDialog(null,"correct, your score is "+score);	
+			
+			}
+			else if(guess.equalsIgnoreCase("josh sucks")||guess.equalsIgnoreCase("finn is awesome")) {
+				score=score+5000000;
+				JOptionPane.showMessageDialog(null, "youre right,your score is " +score);
+			}
+			else{
+				JOptionPane.showMessageDialog(null,"incorrect it is arnold,your score is "+score);// -- Tell them they are right and increase the score by 1
+			}
+
+			// 6. Otherwise:incorrect, it
 			// -- Tell them they are wrong and who the person is
 
 			// 7. Use the showNextImage() method below to get the next image
 			showNextImage();
 		    // 8. Show them their current score
 			
-			// 9. .... repeat for all your images.....
-
 
 		}
 
@@ -75,7 +168,7 @@ public class BodyPartQuiz {
 		window.add(panel);
 		
 		// 3. Change the size of the window so that you can only see part of the image.		
-		window.setSize(500,500);
+		window.setSize(50,100);
 		
 		showNextImage();
 		
