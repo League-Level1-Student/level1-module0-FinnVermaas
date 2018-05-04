@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class CutenessTV implements ActionListener{
+	JFrame frame= new JFrame();
 	public static void main(String[] args) throws Exception{
 		new CutenessTV() .getGoing();
 	}
@@ -50,9 +51,10 @@ frame.pack();
 	
 	}
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent event) {
 		// TODO Auto-generated method stub
-		System.out();
-		if()
+		
+		if(event.getSource())
 	}
+	
 }
